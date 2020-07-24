@@ -47,9 +47,12 @@
         android:textSize="18sp"
         />
     <Spinner
+        android:id="@+id/spinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        />
     <ImageView
+        android:id="@+id/goodsImageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/toad1"
@@ -117,12 +120,13 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@color/colorPrimaryDark"
-            android:layout_toRightOf="@id/currencyTextView"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/quantityTitleTextView"
             android:textColor="@android:color/white"
             android:text="-"
-            android:layout_marginStart="140dp"
+            android:layout_marginStart="210dp"
             android:layout_marginTop="5dp"
+            android:onClick="decreaseQuantity"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -149,6 +153,7 @@
             android:text="+"
             android:layout_marginStart="15dp"
             android:layout_marginTop="5dp"
+            android:onClick="increaseQuantity"
             />
 
     </RelativeLayout>
@@ -159,7 +164,8 @@
         android:text="Add to cart"
         android:textColor="@android:color/white"
         android:background="@color/colorPrimaryDark"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp"
+        android:onClick="addToCart"/>
 
 
  </LinearLayout>
